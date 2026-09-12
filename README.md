@@ -57,7 +57,7 @@ For Software:
 *Customizable sensitivity preferences for Blink EAR, Wink EAR asymmetry delta, Kiss / lip pucker strength, and debounce timings.*
 
 # Diagrams
-![Workflow](workflow.png)
+![Workflow](uploads/workflow.png)
 *Camera input flows through MediaPipe face landmark detection, EAR/MAR calculation, gesture classification, and keyboard action, ending in the sent message.*
 
 # Video
