@@ -46,7 +46,7 @@ npm run dev
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots 
 ![WinkKey Virtual Keyboard](uploads/SS1.png)
 *Main WinkKey interface showing real-time webcam face tracking HUD, active key highlighting, and live message drafting.*
 
@@ -57,10 +57,9 @@ For Software:
 *Customizable sensitivity preferences for Blink EAR, Wink EAR asymmetry delta, Kiss / lip pucker strength, and debounce timings.*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![Workflow](workflow.png)
+*Camera input flows through MediaPipe face landmark detection, EAR/MAR calculation, gesture classification, and keyboard action, ending in the sent message.*
 
-### Project Demo
 # Video
 [Watch WinkKey Demo Video](uploads/Screen%20Recording%20Useless.mp4)
 
