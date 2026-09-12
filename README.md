@@ -1,66 +1,47 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-
-
-# [Project Name] 🎯
-
+# WinkKey
 
 ## Basic Details
-### Team Name: [Name]
-
+### Team Name: Thakkali Monnas
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Vaishakh R Warriar - Adi Shankara Institute of Engineering and Technology
+- Member 2: Ankita Syam - Adi Shankara Institute of Engineering and Technology
 
 ### Project Description
-[2-3 lines about what your project does]
+A full-screen virtual keyboard that you type on entirely with your face. No hands, no mouse, no physical keyboard. Wink left or right to move across the keys, blink with both eyes to select a letter, and kiss the screen to send your message.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Typing with your fingers is fast, easy, and works fine. We decided that wasn't nearly inconvenient enough.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+WinkType watches your face through the webcam in real time using facial landmark detection. It tracks how open your eyes are and how puckered your lips are, then turns that into keyboard input: left wink moves left, right wink moves right, a full blink selects the highlighted key, and a kiss sends the message. A calibration step tunes all of this to your specific face before you start typing.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- JavaScript, HTML, CSS
+- React, Vite
+- MediaPipe FaceLandmarker (@mediapipe/tasks-vision)
+- Web Audio API (sound feedback)
+- Web Speech API (text-to-speech)
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Laptop/PC with a webcam
+- No additional hardware required
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+```
+npm install
+```
 
 # Run
-[commands]
+```
+npm run dev
+```
 
 ### Project Documentation
 For Software:
@@ -79,32 +60,10 @@ For Software:
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - [Name 1]: [Specific contributions]
@@ -116,7 +75,3 @@ Made with ❤️ at TinkerHub Useless Projects
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
-
-
-
->>>>>>> 69311fd79051eb09e3b7ab1c8ad147682aabe197
