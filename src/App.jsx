@@ -37,7 +37,7 @@ export function App() {
   // Settings & Thresholds
   const [thresholds, setThresholds] = useState(() => {
     try {
-      const saved = localStorage.getItem('gazefree_thresholds');
+      const saved = localStorage.getItem('winkkey_thresholds') || localStorage.getItem('gazefree_thresholds');
       return saved ? JSON.parse(saved) : DEFAULT_THRESHOLDS;
     } catch {
       return DEFAULT_THRESHOLDS;
@@ -78,7 +78,7 @@ export function App() {
   useEffect(() => {
     setActiveIndex((prev) => {
       if (prev >= flatKeyCount) {
-        console.log(`[GazeFree] Clamping activeIndex ${prev} -> 0 (layout size: ${flatKeyCount})`);
+        console.log(`[WinkKey] Clamping activeIndex ${prev} -> 0 (layout size: ${flatKeyCount})`);
         return 0;
       }
       return prev;
@@ -91,7 +91,7 @@ export function App() {
       if (!currText.trim()) return currText;
 
       const messageContent = currText.trim();
-      console.log('[GazeFree] 💋 MESSAGE SENT VIA KISS GESTURE:', messageContent);
+      console.log('[WinkKey] 💋 MESSAGE SENT VIA KISS GESTURE:', messageContent);
 
       playSendSound(soundEnabledRef.current);
       if (ttsEnabledRef.current) {
@@ -146,7 +146,7 @@ export function App() {
     setActiveIndex((prev) => {
       const count = flatKeysRef.current.length || 32;
       const next = (prev - 1 + count) % count;
-      console.log(`[GazeFree] ◀ STEP LEFT: activeIndex ${prev} -> ${next} (Key: ${flatKeysRef.current[next]?.id})`);
+      console.log(`[WinkKey] ◀ STEP LEFT: activeIndex ${prev} -> ${next} (Key: ${flatKeysRef.current[next]?.id})`);
       return next;
     });
   }, []);
@@ -156,7 +156,7 @@ export function App() {
     setActiveIndex((prev) => {
       const count = flatKeysRef.current.length || 32;
       const next = (prev + 1) % count;
-      console.log(`[GazeFree] ▶ STEP RIGHT: activeIndex ${prev} -> ${next} (Key: ${flatKeysRef.current[next]?.id})`);
+      console.log(`[WinkKey] ▶ STEP RIGHT: activeIndex ${prev} -> ${next} (Key: ${flatKeysRef.current[next]?.id})`);
       return next;
     });
   }, []);
@@ -165,7 +165,7 @@ export function App() {
   const handleSelectActiveKey = useCallback(() => {
     const currIndex = activeIndexRef.current;
     const activeKey = flatKeysRef.current[currIndex];
-    console.log(`[GazeFree] ⚡ BLINK: selected key "${activeKey?.id}" at index ${currIndex}`);
+    console.log(`[WinkKey] ⚡ BLINK: selected key "${activeKey?.id}" at index ${currIndex}`);
     if (activeKey) {
       handleSelectKey(activeKey);
     }
@@ -173,7 +173,7 @@ export function App() {
 
   // Gesture handler callback - connected from useGestureDetector
   const handleGestureDetected = useCallback((gestureType) => {
-    console.log(`[GazeFree] Gesture received: ${gestureType} | isCalibrating: ${isCalibratingRef.current}`);
+    console.log(`[WinkKey] Gesture received: ${gestureType} | isCalibrating: ${isCalibratingRef.current}`);
     if (isCalibratingRef.current) return;
 
     if (gestureType === 'WINK_LEFT') {
@@ -259,6 +259,7 @@ export function App() {
     console.log('[App] 🚀 CALIBRATION/SETTINGS APPLIED THRESHOLDS:', newThresholds);
     setThresholds(newThresholds);
     try {
+      localStorage.setItem('winkkey_thresholds', JSON.stringify(newThresholds));
       localStorage.setItem('gazefree_thresholds', JSON.stringify(newThresholds));
     } catch {
       // Ignore

@@ -80,7 +80,7 @@ export function TextBar({
       <div className="textbar-top-row">
         <div className="app-branding">
           <span className="brand-dot" />
-          <h1 className="brand-title">GazeFree</h1>
+          <h1 className="brand-title">WinkKey</h1>
           <span className="brand-badge">Facial Gestures</span>
         </div>
 

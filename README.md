@@ -16,7 +16,7 @@ A full-screen virtual keyboard that you type on entirely with your face. No hand
 Typing with your fingers is fast, easy, and works fine. We decided that wasn't nearly inconvenient enough.
 
 ### The Solution (that nobody asked for)
-WinkType watches your face through the webcam in real time using facial landmark detection. It tracks how open your eyes are and how puckered your lips are, then turns that into keyboard input: left wink moves left, right wink moves right, a full blink selects the highlighted key, and a kiss sends the message. A calibration step tunes all of this to your specific face before you start typing.
+WinkKey watches your face through the webcam in real time using facial landmark detection. It tracks how open your eyes are and how puckered your lips are, then turns that into keyboard input: left wink moves left, right wink moves right, a full blink selects the highlighted key, and a kiss sends the message. A calibration step tunes all of this to your specific face before you start typing.
 
 ## Technical Details
 ### Technologies/Components Used
@@ -47,14 +47,14 @@ npm run dev
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![WinkKey Virtual Keyboard](uploads/SS1.png)
+*Main WinkKey interface showing real-time webcam face tracking HUD, active key highlighting, and live message drafting.*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Sent Messages History](uploads/SS2.png)
+*Message history drawer showing previously sent messages with timestamps and text-to-speech audio replay.*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Preferences & Gesture Sensitivity Settings](uploads/SS3.png)
+*Customizable sensitivity preferences for Blink EAR, Wink EAR asymmetry delta, Kiss / lip pucker strength, and debounce timings.*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -62,8 +62,9 @@ For Software:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[Watch WinkKey Demo Video](uploads/Screen%20Recording%20Useless.mp4)
+
+*Demonstration of WinkKey in action: webcam face tracking, navigating keys with left/right winks, selecting characters via blinks, and sending messages using the kiss/pucker gesture.*
 
 ## Team Contributions
 - [Name 1]: [Specific contributions]

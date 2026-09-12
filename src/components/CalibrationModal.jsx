@@ -449,7 +449,7 @@ export function CalibrationModal({
     const calibrated = computedFinal || computeCalibratedThresholds(samples, defaultThresholds);
 
     // Grouped, transparent logging for verification
-    console.group('%c[GazeFree Calibration] 🎯 Calibration Complete & Applied', 'color: #06b6d4; font-weight: bold; font-size: 13px;');
+    console.group('%c[WinkKey Calibration] 🎯 Calibration Complete & Applied', 'color: #06b6d4; font-weight: bold; font-size: 13px;');
     console.log('%cMeasured Personal Characteristics:', 'color: #38bdf8; font-weight: bold;');
     console.table({
       'Resting Open Eye (Neutral)': { Measured: calibrated.openEAR, Threshold: '-', Margin: '-' },
