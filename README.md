@@ -66,9 +66,8 @@ For Software:
 *Demonstration of WinkKey in action: webcam face tracking, navigating keys with left/right winks, selecting characters via blinks, and sending messages using the kiss/pucker gesture.*
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Ankita Syam: Built the keyboard UI, calibration wizard, gesture-to-keyboard integration, threshold tuning, debugging, and full project documentation
+- Vaishakh R Warriar: Contributed to the facial gesture detection logic (MediaPipe integration, EAR/MAR calculations for wink/blink/kiss classification)
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
